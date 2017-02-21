@@ -169,11 +169,11 @@ body{
 .panel-default{
 	border:0;
 }
-.panel-heading{
+.extra-navigation .panel-heading{
 	background-color: #f05330!important;
 	color: #fff!important
 }
-.panel-body{
+.extra-navigation .panel-body{
 	background-color: #fd7455!important;
 	
 }
@@ -185,13 +185,65 @@ body{
 	list-style-type: none
 }
 
+/* Materias */
+#materias{
+	padding-top: 30px;
+}
+#materias .panel-heading{
+	background-color: #356daf!important;
+	color: #fff!important
+}
+#materias .panel-body{
+	background-color: none;
+	
+}
 
-
+thead{
+	font-weight: bold;
+}
+hr{
+	border-top: 1px solid #ccc;
+}
 /*Notas intenas*/
 .nota-data{
-	padding:15px;
-	color:#fff;
-	background-color: #f05330;
+    padding: 15px 15px 15px 15px;
+    color: #fff;
+    background-color: #f05330;
+    display: block;
+    float: left;
+    width: 100%;
+}
+.nota-imagen{
+	margin-top: 30px;
+	float: left;
+	margin-bottom: 30px;
+}
+.nota{
+	margin-top: 30px;
+}
+.nota h2{
+	margin-top: 40px;
+	margin-bottom: 0px;
+}
+.nota-contenido{
+	line-height: 1.6;
+    font-size: 16px;
+    padding: 20px;
+    float: left;
+    width: 100%;
+    display: block;
+    background: #fff;
+}
+.nota-categorias{
+	padding:20px 0;
+	display: block;
+	float: left;
+	width: 100%;
+}
+.label-default{
+	background-color: #fff!important;
+	color:#555;
+	border: 1px solid #f05330;
 }
 /*Buscador */
 
