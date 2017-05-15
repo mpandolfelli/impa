@@ -231,7 +231,7 @@
     $(document).ready(function(){
         var height = $(window).height();
         $('.extra-navigation').height(height);
-        $('.app-nav').height(height - 90);
+       // $('.app-nav').height(height - 90);
 
         var opened = false;
 

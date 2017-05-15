@@ -21,6 +21,12 @@ class Web extends CI_Controller{
         $this->load->view('layouts/web',$data);
     }
 
+
+    function ver($url){
+        $data['noticia'] =$this->Web_model->getNew($url);
+        $data['_view'] = 'web/nota';
+        $this->load->view('layouts/web',$data);
+    }
    
     
 }

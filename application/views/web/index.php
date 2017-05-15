@@ -148,7 +148,7 @@ Exposición de los Es esa nuestra filosofía</p>
               <h4><?=$noticia['titulo'];?></h4>
               <p><?=$noticia['copete'];?></p>
               <p><strong><?=$noticia['timestamp'];?></strong></p>
-              <a href="" class="ver-mas">Ver maas...</a>
+              <a href="web/ver/<?=$noticia['url'];?>" class="ver-mas">Ver maas...</a>
             </div>
           <? } ?>
         

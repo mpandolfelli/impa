@@ -4,6 +4,7 @@
 }
 .app-nav{
 	background-color: #356daf;
+	height: 100vh;
 }
 .nav>li>a:focus, .nav>li>a:hover {
     text-decoration: none;
