@@ -76,7 +76,7 @@ body{
 }
 
 .box-novedades{
-	
+	text-align: center!important;
 }
 .box-novedades h4{
 	font-weight: bold;
@@ -97,7 +97,7 @@ body{
 	color: #f05330;
 }
 .ver-mas:hover{
-	
+	background-color: #ccc;
 	color: #f05330;
 	transition:all ease .5s;
 	text-decoration: none
@@ -206,8 +206,9 @@ hr{
 }
 /*Notas intenas*/
 .nota-data{
-    padding: 15px 0;
-    font-size: 12px;
+    padding: 15px 15px 15px 15px;
+    color: #fff;
+    background-color: #f05330;
     display: block;
     float: left;
     width: 100%;
@@ -215,11 +216,7 @@ hr{
 .nota-imagen{
 	margin-top: 30px;
 	float: left;
-	width: 100%;
 	margin-bottom: 30px;
-}
-.nota-imagen img{
-	width: 100%;
 }
 .nota{
 	margin-top: 30px;

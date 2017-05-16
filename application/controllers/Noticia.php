@@ -109,51 +109,51 @@ class Noticia extends CI_Controller{
             show_error('The noticia you are trying to delete does not exist.');
     }
 
-    private function add_file($news_id,$type,$input_name = false, $resize = false){
-        
-        if($type == VIDEO){
+   /* private function add_file($id){
 
-            $videos = $this->input->post('link_video[]');
-            foreach ($videos as $key => $value) {        
-                $file = $this->upload_file->get_key_youtube($value);
-                
-                if($file){
+        $files = $_FILES['files'];
+        if(count($files) > 0){
 
-                    $new_file = array(
-                        'new_id'=>$news_id,
-                        'type_id'=>$type,
-                        'name'=>$file    
-                    );
-
-                   $this->db->insert('files',$new_file);
-                }
+            foreach($files as $key => $value){
+                $new_file = array(
+                    'noticia_id'=>$id,
+                    'tipo_id'=>TRUE,
+                    'nombre'=>$value['name']  
+                );
+                $this->db->insert('files',$new_file);
             }
+
+        }
         
-        }else{
-            if($resize){
-                $this->upload_file->image($input_name);
-                if($type == PHOTO){
-                    $file = $this->upload_file->upload($news_id,true);
+    }*/
+
+    function add_file($id) {
+
+        $valid_formats = array("jpg", "png", "gif", "zip", "bmp");
+        $max_file_size = 1024*100;
+        $path = "images/news/"; 
+        $count = 0;
+        if(isset($_POST) and $_SERVER['REQUEST_METHOD'] == "POST"){
+            foreach ($_FILES['files']['name'] as $f => $name) {     
+         
+                if( ! in_array(pathinfo($name, PATHINFO_EXTENSION), $valid_formats) ){
+                    $message[] = "$name is not a valid format";
+                    continue; 
                 }
-
-            }else{
-                $this->upload_file->document($input_name);
-                $file = $this->upload_file->upload($news_id);
-            }
-            if(count($file) > 0){
-                foreach($file as $key => $value){
-                    $new_file = array(
-                        'noticia_id'=>$news_id,
-                        'tipo_id'=>$type,
-                        'nombre'=>$value['name']  
-                    );
-
-                    $this->db->insert('files',$new_file);
+                else{ 
+                    if(move_uploaded_file($_FILES["files"]["tmp_name"][$f], $path.$name)){
+                        $count++; 
+                        $new_file = array(
+                        'noticia_id'=>$id,
+                        'tipo_id'=>TRUE,
+                        'nombre'=>$id."_".$name 
+                        );
+                        $this->db->insert('files',$new_file);
+                    }
                 }
             }
         }
     }
-
 
     private function toAscii($str, $replace=array(), $delimiter='-') {
         $str = strip_tags($str);

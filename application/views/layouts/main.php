@@ -12,6 +12,7 @@
     <link href="<?php echo site_url('resources/css/impa.css');?>" rel="stylesheet">
     <link href="<?php echo site_url('resources/css/app.css');?>" rel="stylesheet">
     <link href="<?php echo site_url('resources/css/font-awesome.min.css');?>" rel="stylesheet">
+    <link href="<?php echo site_url('resources/css/jquery-confirm.css');?>" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -187,7 +188,7 @@
                         <!-- /.row -->
                         <?php                
                         if(isset($_view) && $_view)
-                            $this->load->view($_view);
+                            $this->load->view("admin/".$_view);
                         ?>
                         <!-- /.row -->
                     </div>
@@ -207,9 +208,11 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="<?php echo site_url('resources/js/sb-admin-2.js');?>"></script>
+    <script src="<?php echo site_url('resources/js/jquery-confirm.js');?>"></script>
     <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
 
     <script type="text/javascript">
+        var base_url = '<?php echo base_url();?>';
         tinymce.init({
               force_br_newlines : false,
               force_p_newlines : false,
@@ -229,6 +232,7 @@
             content_css: ['//www.tinymce.com/css/codepen.min.css']
         });
     $(document).ready(function(){
+
         var height = $(window).height();
         $('.extra-navigation').height(height);
        // $('.app-nav').height(height - 90);
@@ -245,6 +249,28 @@
             }
 
         });
+
+        $(".delete").click(function(e){
+            e.preventDefault();
+            var url = $(this).attr('href');
+            var id = $(this).data("id");
+            $.confirm({
+                title: 'Confirm!',
+                content: 'Desea eliminar este elemento ?',
+                buttons: {
+                    Si: function () {
+                        $.get(url, function() {
+                            $("#"+id).remove().fadeOut();
+                        });
+                    },          
+                    No: function () {
+                       
+                    },
+                }
+            });
+        })
+
+
     });
     </script>
 </body>

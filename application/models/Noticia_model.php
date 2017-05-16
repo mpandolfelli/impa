@@ -16,7 +16,7 @@ class Noticia_model extends CI_Model
         $this->db->select('noticias.*,categorias.nombre as categoria, users.email as usuario');
         $this->db->join('users','users.id = noticias.user_id');
         $this->db->join('categorias','categorias.id = noticias.categoria_id');
-        return $this->db->get_where('noticias',array('id'=>$id))->row_array();
+        return $this->db->get_where('noticias',array('noticias.id'=>$id))->row_array();
     }
     
     /*
