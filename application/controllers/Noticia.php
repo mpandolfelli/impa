@@ -36,7 +36,7 @@ class Noticia extends CI_Controller{
             );
             
             $noticia_id = $this->Noticia_model->add_noticia($params);
-            $this->add_file($noticia_id,VIDEO);
+            $this->add_file($noticia_id);
             redirect('noticia/index');
         }
         else
