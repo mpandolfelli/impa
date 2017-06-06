@@ -100,34 +100,34 @@
                     <div class="panel-body">
                         <ul>
                             <li>
-                                <a href="<?php echo site_url('carrera_materia/index');?>"><i class="fa fa-table fa-fw"></i> Carrera Materia</a>
+                                <a href="<?php echo site_url('admin/carrera_materia/index');?>"><i class="fa fa-table fa-fw"></i> Carrera Materia</a>
                             </li>
                             <li>
-                                <a href="<?php echo site_url('carrera/index');?>"><i class="fa fa-table fa-fw"></i> Carrera</a>
+                                <a href="<?php echo site_url('admin/carrera/index');?>"><i class="fa fa-table fa-fw"></i> Carrera</a>
                             </li>
                             <li>
-                                <a href="<?php echo site_url('categoria/index');?>"><i class="fa fa-table fa-fw"></i> Categoria</a>
+                                <a href="<?php echo site_url('admin/categoria/index');?>"><i class="fa fa-table fa-fw"></i> Categoria</a>
                             </li>
                             <li>
-                                <a href="<?php echo site_url('login_attempt/index');?>"><i class="fa fa-table fa-fw"></i> Login Attempt</a>
+                                <a href="<?php echo site_url('admin/login_attempt/index');?>"><i class="fa fa-table fa-fw"></i> Login Attempt</a>
                             </li>
                             <li>
-                                <a href="<?php echo site_url('materiale/index');?>"><i class="fa fa-table fa-fw"></i> Materiale</a>
+                                <a href="<?php echo site_url('admin/materiale/index');?>"><i class="fa fa-table fa-fw"></i> Materiale</a>
                             </li>
                             <li>
-                                <a href="<?php echo site_url('materia/index');?>"><i class="fa fa-table fa-fw"></i> Materia</a>
+                                <a href="<?php echo site_url('admin/materia/index');?>"><i class="fa fa-table fa-fw"></i> Materia</a>
                             </li>
                             <li>
-                                <a href="<?php echo site_url('noticia/index');?>"><i class="fa fa-table fa-fw"></i> Noticia</a>
+                                <a href="<?php echo site_url('admin/noticia/index');?>"><i class="fa fa-table fa-fw"></i> Noticia</a>
                             </li>
                             <li>
-                                <a href="<?php echo site_url('user/index');?>"><i class="fa fa-table fa-fw"></i> User</a>
+                                <a href="<?php echo site_url('admin/user/index');?>"><i class="fa fa-table fa-fw"></i> User</a>
                             </li>
                             <li>
-                                <a href="<?php echo site_url('group/index');?>"><i class="fa fa-table fa-fw"></i> Group</a>
+                                <a href="<?php echo site_url('admin/group/index');?>"><i class="fa fa-table fa-fw"></i> Group</a>
                             </li>
                             <li>
-                                <a href="<?php echo site_url('users_group/index');?>"><i class="fa fa-table fa-fw"></i> Users Group</a>
+                                <a href="<?php echo site_url('admin/users_group/index');?>"><i class="fa fa-table fa-fw"></i> Users Group</a>
                             </li>
                         </ul>
                     </div>

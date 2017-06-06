@@ -8,7 +8,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         
-						<?php echo form_open('imagene/add',array("class"=>"form-horizontal")); ?>
+						<?php echo form_open('',array("class"=>"form-horizontal")); ?>
 
 							<div class="form-group">
 									<label for="noticia_id" class="col-md-4 control-label">Noticia Id</label>

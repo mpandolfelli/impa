@@ -4,7 +4,7 @@
             <div class="panel-heading">
                 Noticías 
                 <div class="pull-right">
-                    <a href="<?php echo site_url('noticia/add'); ?>" class="btn btn-success btn-sm">Agregar</a> 
+                    <a href="<?php echo site_url('admin/noticia/add'); ?>" class="btn btn-success btn-sm">Agregar</a> 
                 </div>
                 <br clear="all">
             </div>
@@ -31,8 +31,8 @@
 							<td><?php echo $n['copete']; ?></td>
 							
 							<td>
-                                <a href="<?php echo site_url('noticia/edit/'.$n['id']); ?>" class="btn btn-info btn-xs"><span class="fa fa-pencil"></span></a> 
-                                <a href="<?php echo site_url('noticia/remove/'.$n['id']); ?>" class="btn btn-danger btn-xs delete" data-id="<?php echo $n['id'];?>"><span class="fa fa-trash"></span></a>
+                                <a href="<?php echo site_url('admin/noticia/edit/'.$n['id']); ?>" class="btn btn-info btn-xs"><span class="fa fa-pencil"></span></a> 
+                                <a href="<?php echo site_url('admin/noticia/remove/'.$n['id']); ?>" class="btn btn-danger btn-xs delete" data-id="<?php echo $n['id'];?>"><span class="fa fa-trash"></span></a>
                             </td>
                         </tr>
                         <?php } ?>

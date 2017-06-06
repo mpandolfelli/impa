@@ -8,7 +8,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         
-						<?php echo form_open('noticia/add',array("class"=>"form-horizontal","enctype"=>"multipart/form-data")); ?>
+						<?php echo form_open('',array("class"=>"form-horizontal","enctype"=>"multipart/form-data")); ?>
 
 							<div class="form-group">
 									<label for="categoria_id" class="col-md-2 control-label">Categoria Id</label>

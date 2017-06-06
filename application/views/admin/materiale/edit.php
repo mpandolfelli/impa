@@ -8,7 +8,7 @@
                 <div class="row">
                     <div class="col-md-12">
 						
-						<?php echo form_open('materiale/edit/'.$materiale['id'],array("class"=>"form-horizontal")); ?>
+						<?php echo form_open(''.$materiale['id'],array("class"=>"form-horizontal")); ?>
 
 							<div class="form-group">
 									<label for="user_id" class="col-md-4 control-label">User Id</label>

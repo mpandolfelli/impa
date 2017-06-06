@@ -4,7 +4,7 @@
             <div class="panel-heading">
                 Listing
                 <div class="pull-right">
-                    <a href="<?php echo site_url('login_attempt/add'); ?>" class="btn btn-success btn-sm">Add</a> 
+                    <a href="<?php echo site_url('admin/login_attempt/add'); ?>" class="btn btn-success btn-sm">Add</a> 
                 </div>
                 <br clear="all">
             </div>
@@ -25,8 +25,8 @@
 							<td><?php echo $l['login']; ?></td>
 							<td><?php echo $l['time']; ?></td>
 							<td>
-                                <a href="<?php echo site_url('login_attempt/edit/'.$l['id']); ?>" class="btn btn-info btn-xs"><span class="fa fa-pencil"></span> Edit</a> 
-                                <a href="<?php echo site_url('login_attempt/remove/'.$l['id']); ?>" class="btn btn-danger btn-xs"><span class="fa fa-trash"></span> Delete</a>
+                                <a href="<?php echo site_url('admin/login_attempt/edit/'.$l['id']); ?>" class="btn btn-info btn-xs"><span class="fa fa-pencil"></span> Edit</a> 
+                                <a href="<?php echo site_url('admin/login_attempt/remove/'.$l['id']); ?>" class="btn btn-danger btn-xs"><span class="fa fa-trash"></span> Delete</a>
                             </td>
                         </tr>
                         <?php } ?>

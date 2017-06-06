@@ -8,7 +8,7 @@
                 <div class="row">
                     <div class="col-md-12">
 						
-						<?php echo form_open('login_attempt/edit/'.$login_attempt['id'],array("class"=>"form-horizontal")); ?>
+						<?php echo form_open(''.$login_attempt['id'],array("class"=>"form-horizontal")); ?>
 
 							<div class="form-group">
 								<label for="ip_address" class="col-md-4 control-label">Ip Address</label>

@@ -4,7 +4,7 @@
             <div class="panel-heading">
                 Listing
                 <div class="pull-right">
-                    <a href="<?php echo site_url('users_group/add'); ?>" class="btn btn-success btn-sm">Add</a> 
+                    <a href="<?php echo site_url('admin/users_group/add'); ?>" class="btn btn-success btn-sm">Add</a> 
                 </div>
                 <br clear="all">
             </div>
@@ -23,8 +23,8 @@
 							<td><?php echo $u['usuario']; ?></td>
 							<td><?php echo $u['sector']; ?></td>
 							<td>
-                                <a href="<?php echo site_url('users_group/edit/'.$u['id']); ?>" class="btn btn-info btn-xs"><span class="fa fa-pencil"></span> Edit</a> 
-                                <a href="<?php echo site_url('users_group/remove/'.$u['id']); ?>" class="btn btn-danger btn-xs delete"><span class="fa fa-trash"></span> Delete</a>
+                                <a href="<?php echo site_url('admin/users_group/edit/'.$u['id']); ?>" class="btn btn-info btn-xs"><span class="fa fa-pencil"></span> Edit</a> 
+                                <a href="<?php echo site_url('admin/users_group/remove/'.$u['id']); ?>" class="btn btn-danger btn-xs delete"><span class="fa fa-trash"></span> Delete</a>
                             </td>
                         </tr>
                         <?php } ?>

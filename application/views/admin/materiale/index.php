@@ -4,7 +4,7 @@
             <div class="panel-heading">
                 Materiales
                 <div class="pull-right">
-                    <a href="<?php echo site_url('materiale/add'); ?>" class="btn btn-success btn-sm">Add</a> 
+                    <a href="<?php echo site_url('admin/materiale/add'); ?>" class="btn btn-success btn-sm">Add</a> 
                 </div>
                 <br clear="all">
             </div>
@@ -29,8 +29,8 @@
 							<td><?php echo $m['titulo']; ?></td>
 							<td><?php echo $m['descripcion']; ?></td>
 							<td>
-                                <a href="<?php echo site_url('materiale/edit/'.$m['id']); ?>" class="btn btn-info btn-xs"><span class="fa fa-pencil"></span> Edit</a> 
-                                <a href="<?php echo site_url('materiale/remove/'.$m['id']); ?>" class="btn btn-danger btn-xs delete"><span class="fa fa-trash"></span> Delete</a>
+                                <a href="<?php echo site_url('admin/materiale/edit/'.$m['id']); ?>" class="btn btn-info btn-xs"><span class="fa fa-pencil"></span> Edit</a> 
+                                <a href="<?php echo site_url('admin/materiale/remove/'.$m['id']); ?>" class="btn btn-danger btn-xs delete"><span class="fa fa-trash"></span> Delete</a>
                             </td>
                         </tr>
                         <?php } ?>
