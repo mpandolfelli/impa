@@ -5,10 +5,14 @@ class Check_login{
 		$CI =& get_instance();
 		$class = $CI->router->fetch_class();
 		$method = $CI->router->fetch_method(); 	
-    $folder = $CI->router->directory;
-    
-    die();
-
+    	$folder = $CI->router->directory;
+    	$folder_login = array('admin/');
+    	if(in_array($folder, $folder_login)){
+			if (!$CI->ion_auth->logged_in())
+			{
+				redirect('auth/login', 'refresh');
+			}
+    	}
 
   }
 
