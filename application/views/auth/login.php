@@ -8,10 +8,10 @@
     <title>ISFD</title>
 
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/impa.css" rel="stylesheet">
+    <link href="<?php echo site_url('resources/css/bootstrap.min.css');?>" rel="stylesheet">
+    <link href="<?php echo site_url('resources/css/impa.css');?>" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="<?php echo site_url('resources/css/font-awesome.min.css');?>" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -26,7 +26,7 @@
         <h2 style="margin-top:100px;">Acceso a Docentes y estudiantes</h2>
         <div id="infoMessage"><?php echo $message;?></div>
         <div class="login">
-          <img src="images/logo.jpg" width="200" align="center">
+          <img src="<?php echo site_url('resources/images/logo.jpg');?>" width="200" align="center">
           <?php echo form_open("auth/login",array('class'=>'separador'));?>
             <div class="form-group"> 
               <?php echo form_input($identity);?>
